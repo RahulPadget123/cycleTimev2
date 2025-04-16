@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="/stylesheets/adminLoginPage.css">
+  </head>
+  <body>
+        <!-- As a heading -->
+        <nav class="navbar bg-body-tertiary">
+            <div class="container-fluid bg-primary">
+            <span class="navbar-brand mb-0 h1 text-white">Padget</span>
+            </div>
+        </nav>
+        <!-- end -->
+
+        <div class="login-container">
+            <div class="login-box">
+                <h2>Admin Login</h2>
+                <form action="/adminLogin" method="POST">
+                    <div class="input-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="name" placeholder="Enter username" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="Enter password" required>
+                    </div>
+                    <button type="submit" class="btn-submit">Login</button>
+                </form>
+                <p class="back-link"><a href="/">Back to Home</a></p>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+  </body>
+</html>

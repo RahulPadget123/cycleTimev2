@@ -1,0 +1,65 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.login-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f2f5;
+}
+
+.button-wrapper {
+    text-align: center;
+}
+
+.btn-admin {
+    background-color: #007bff;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 30px;
+    margin: 10px;
+    font-size: 16px;
+    display: inline-block;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.btn-user {
+    background-color: #28a745;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 30px;
+    margin: 10px;
+    font-size: 16px;
+    display: inline-block;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.btn-admin:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.btn-user:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 576px) {
+    .btn-admin, .btn-user {
+        display: block;
+        width: 80%;
+        margin: 10px auto;
+    }
+}

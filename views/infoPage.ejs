@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="/stylesheets/infoPage.css">
+  </head>
+  <body>
+        <!-- As a heading -->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <a class="navbar-brand text-primary" href="#">Padget</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <!-- <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/info/downloadInfo">Dwonload</a>
+                  </li> -->
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Download
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="/info/sector58Info">Palnt-58</a></li>
+                        <li><a class="dropdown-item" href="/info/sector60Info">Palnt-60</a></li>
+                        <li><a class="dropdown-item" href="/info/sector63Info">Palnt-63</a></li>
+                        <li><a class="dropdown-item" href="/info/sector68Info">Plant-68</a></li>
+                    </ul>
+                  </li>
+                </ul>
+                <div class="d-flex">
+                    <a href="/info/logout" class="btn btn-outline-primary">Logout</a>
+                </div>
+              </div>
+            </div>
+          </nav>
+        <!-- end -->
+
+        <div class="form-container">
+            <div class="form-box">
+                <h2>Employee Cycle Time</h2>
+                <form action="/info/createInfo/<%= user._id %>" method="POST">
+                    <div class="input-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter employee name" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="plant">Enter Plant</label>
+                        <select id="plant" name="plant" required>
+                            <option value="" disabled selected>Select a plant</option>
+                            <option value="sector-58">sector-58</option>
+                            <option value="sector-60">sector-60</option>
+                            <option value="sector-63">sector-63</option>
+                            <option value="sector-68">sector-68</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="project">Enter Project</label>
+                        <input type="text" id="project" name="project" placeholder="Enter Project" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="model">Enter Model</label>
+                        <input type="text" id="model" name="model" placeholder="Enter Model" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="section">Enter Section</label>
+                        <select id="section" name="section" required>
+                            <option value="" disabled selected>Select a section</option>
+                            <option value="SMT">SMT</option>
+                            <option value="BLT">BLT</option>
+                            <option value="LDA">LDA</option>
+                            <option value="FA">FA</option>
+                            <option value="Testing">Testing</option>
+                            <option value="Packing">Packing</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="stationNumber">Station Number</label>
+                        <input type="number" id="stationNumber" name="stationNumber" placeholder="Enter station number" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="stationName">Station Name</label>
+                        <input type="text" id="stationName" name="stationName" placeholder="Enter station name" required>
+                    </div>
+                    <!-- <div class="input-group">
+                        <label for="avgOct">Avg OCT</label>
+                        <input type="number" id="avgOct" name="avgOct" placeholder="Enter CT1 OCT" step="0.01" required>
+                    </div> -->
+                    <div class="input-group">
+                        <label for="ct1">CT1</label>
+                        <input type="number" id="ct1" name="ct1" placeholder="Enter CT1" step="0.01" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="ct2">CT2</label>
+                        <input type="number" id="ct2" name="ct2" placeholder="Enter CT2" step="0.01" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="ct3">CT3</label>
+                        <input type="number" id="ct3" name="ct3" placeholder="Enter CT3" step="0.01" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="ct4">CT4</label>
+                        <input type="number" id="ct4" name="ct4" placeholder="Enter CT4" step="0.01" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="ct5">CT5</label>
+                        <input type="number" id="ct5" name="ct5" placeholder="Enter CT5" step="0.01" required>
+                    </div>
+
+
+                    <!-- <div class="input-group">
+                        <label for="avgOct">Avg MCT</label>
+                        <input type="number" id="avgOct" name="avgMct" placeholder="Enter CT1 OCT" step="0.01" required>
+                    </div> -->
+                    <div class="input-group">
+                        <label for="numberOfStation">Number of Stations</label>
+                        <input type="number" id="numberOfStation" name="numberOfStation" placeholder="Enter number of stations" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="numberOfDevices">Number of Devices</label>
+                        <input type="number" id="numberOfDevices" name="numberOfDevices" placeholder="Enter number of devices" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="numberOfManPower">Number of Manpower</label>
+                        <input type="number" id="numberOfManPower" name="numberOfManPower" placeholder="Enter number of manpower" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="numberOfMachine">Number of Machines</label>
+                        <input type="number" id="numberOfMachine" name="numberOfMachine" placeholder="Enter number of machines" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="numberOfJigs">Number of Jigs</label>
+                        <input type="number" id="numberOfJigs" name="numberOfJigs" placeholder="Enter number of Jigs" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="taktTime">Takt Time</label>
+                        <input type="number" id="taktTime" name="taktTime" placeholder="Enter Takt Time" required>
+                    </div>
+                    <button type="submit" class="btn-submit">Submit</button>
+                    <!-- <button type="reset" class="btn-reset">Reset</button> -->
+                </form>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+  </body>
+</html>

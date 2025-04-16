@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="/stylesheets/downloadInfoPage.css">
+</head>
+<body>
+    <header>
+        <h1>Download <%= sector %> Project</h1>
+        <h1><a href="/info/createInfo" style="color: #fff; text-decoration: none;">Back</a></h1>
+        <p>Select a project from the dropdown below to download the CSV files.</p>
+    </header>
+    <main>
+        <section class="download-section">
+            <div class="dropdown-container">
+                <label for="project-select">Choose <%= sector %> Project:</label>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Download
+                    </a>
+                    <ul class="dropdown-menu">
+                            <% if(project1 == "Xiaomi"){ %>
+                                <li><a class="dropdown-item" href="/info/<%= sector %>/<%= project1 %>"><%= project1 %></a></li>
+                            <% } %>
+                            <% if(project2 == "Compal"){ %>
+                                <li><a class="dropdown-item" href="/info/<%= sector %>/<%= project2 %>"><%= project2 %></a></li>
+                            <% } %>
+                            <% if(project3 == "Lenovo"){ %>
+                                <li><a class="dropdown-item" href="/info/<%= sector %>/<%= project3 %>"><%= project3 %></a></li>
+                            <% } %>
+                            <% if(project4 == "Moto-SMT"){ %>
+                                <li><a class="dropdown-item" href="/info/<%= sector %>/<%= project4 %>"><%= project4 %></a></li>
+                            <% } %>
+                            <% if(project5 == "Jio"){ %>
+                                <li><a class="dropdown-item" href="/info/<%= sector %>/<%= project5 %>"><%= project5 %></a></li>
+                            <% } %>
+                            <% if(project6 == "Acer"){ %>
+                                <li><a class="dropdown-item" href="/info/<%= sector %>/<%= project6 %>"><%= project6 %></a></li>
+                            <% } %>
+                        <li><a class="dropdown-item" href="/info/<%= sector %>">All-Project</a></li>
+                    </ul>
+                  </li>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Padget(Dixon). All rights reserved.</p>
+    </footer>
+
+    <!-- <script>
+        function downloadProject() {
+            const select = document.getElementById('project-select');
+            const selectedValue = select.value;
+            if (selectedValue) {
+                alert(`Downloading ${select.options[select.selectedIndex].text}...`);
+                // Add actual download logic here
+            } else {
+                alert('Please select a project to download.');
+            }
+        }
+    </script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+</body>
+</html>
